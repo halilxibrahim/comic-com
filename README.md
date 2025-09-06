@@ -116,14 +116,6 @@ This project showcases the power of Gemini 2.5 Flash Image Preview through:
 
 This project is created for the Nano Banana Hackathon 2025. All rights reserved.
 
-## 🤝 Contributing
-
-This is a hackathon project. For questions or suggestions, please open an issue.
-
-## 📞 Support
-
-For technical support or questions about the hackathon submission, please contact the development team.
-
 ---
 
 **Built with ❤️ for the Nano Banana Hackathon 2025**
