@@ -38,6 +38,30 @@
   },
   "errors": {
     "cameraAccess": "Kameraya erişim sağlanamadı. Lütfen tarayıcı izinlerini kontrol edin.",
-    "imageGeneration": "Görüntü oluşturulurken bir hata oluştu. Lütfen tekrar deneyin."
+    "imageGeneration": "Görüntü oluştururken bir hata oluştu. Lütfen tekrar deneyin."
+  },
+  "onboarding": {
+    "welcome": "Hoş Geldiniz!",
+    "title": "🎭 Hikâye Fotoğraf Editörü",
+    "subtitle": "Selfie'nizi tarihi karakterlere, süper kahramanlara veya çizgi roman figürlerine dönüştürün",
+    "features": {
+      "title": "Neler Yapabilirsiniz?",
+      "ai": {
+        "title": "AI Gücü",
+        "description": "Gelişmiş yapay zeka ile fotoğraflarınızı dönüştürün"
+      },
+      "styles": {
+        "title": "Çoklu Stil",
+        "description": "Ortaçağ, Rönesans, Süper Kahraman ve daha fazlası"
+      },
+      "easy": {
+        "title": "Kolay Kullanım",
+        "description": "Sadece fotoğraf yükleyin ve sihri görün"
+      }
+    },
+    "getStarted": "Hemen Başla",
+    "skip": "Atla",
+    "clickToStart": "Tıklayarak başla →",
+    "backToOnboarding": "Onboarding'e Dön"
   }
 }

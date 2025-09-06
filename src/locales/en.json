@@ -39,5 +39,29 @@
   "errors": {
     "cameraAccess": "Could not access camera. Please check browser permissions.",
     "imageGeneration": "An error occurred while generating the image. Please try again."
+  },
+  "onboarding": {
+    "welcome": "Welcome!",
+    "title": "🎭 Story Photo Editor",
+    "subtitle": "Transform your selfie into historical characters, superheroes, or comic book figures",
+    "features": {
+      "title": "What Can You Do?",
+      "ai": {
+        "title": "AI Power",
+        "description": "Transform your photos with advanced artificial intelligence"
+      },
+      "styles": {
+        "title": "Multiple Styles",
+        "description": "Medieval, Renaissance, Superhero and much more"
+      },
+      "easy": {
+        "title": "Easy to Use",
+        "description": "Just upload your photo and watch the magic happen"
+      }
+    },
+    "getStarted": "Get Started",
+    "skip": "Skip",
+    "clickToStart": "Click to start →",
+    "backToOnboarding": "Back to Onboarding"
   }
 }
