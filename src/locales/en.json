@@ -1,0 +1,43 @@
+{
+  "app": {
+    "title": "🎭 Story Photo Editor",
+    "subtitle": "Transform your selfie into historical characters, superheroes, or comic book figures"
+  },
+  "upload": {
+    "title": "Upload Photo",
+    "selectFile": "Select File",
+    "captureFromCamera": "Capture from Camera",
+    "waitingForPhoto": "Waiting for Photo",
+    "selectPhotoFromLeft": "Select a photo from the left panel to get started"
+  },
+  "styles": {
+    "title": "🎨 Style Options",
+    "medieval": "Medieval Knight",
+    "renaissance": "Renaissance Portrait",
+    "superhero": "Superhero",
+    "comic": "Comic Book"
+  },
+  "customPrompt": {
+    "title": "✨ Custom Prompt",
+    "placeholder": "Write your own style description..."
+  },
+  "generate": {
+    "button": "Generate Photo",
+    "generating": "Generating...",
+    "selectPhotoFirst": "Please select a photo first.",
+    "selectStyleOrPrompt": "Please select a style or enter a custom prompt."
+  },
+  "preview": {
+    "original": "📸 Original Photo",
+    "result": "🎨 Result",
+    "download": "Download",
+    "resultWillAppearHere": "Result will appear here"
+  },
+  "footer": {
+    "poweredBy": "✨ Powered by Gemini AI"
+  },
+  "errors": {
+    "cameraAccess": "Could not access camera. Please check browser permissions.",
+    "imageGeneration": "An error occurred while generating the image. Please try again."
+  }
+}

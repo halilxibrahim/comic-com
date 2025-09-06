@@ -1,0 +1,43 @@
+{
+  "app": {
+    "title": "🎭 Hikâye Fotoğraf Editörü",
+    "subtitle": "Selfie'nizi tarihi karakterlere, süper kahramanlara veya çizgi roman figürlerine dönüştürün"
+  },
+  "upload": {
+    "title": "Fotoğraf Yükle",
+    "selectFile": "Dosya Seç",
+    "captureFromCamera": "Kameradan Çek",
+    "waitingForPhoto": "Fotoğraf Bekleniyor",
+    "selectPhotoFromLeft": "Başlamak için sol panelden bir fotoğraf seçin"
+  },
+  "styles": {
+    "title": "🎨 Stil Seçenekleri",
+    "medieval": "Ortaçağ Şövalyesi",
+    "renaissance": "Rönesans Portresi",
+    "superhero": "Süper Kahraman",
+    "comic": "Çizgi Roman"
+  },
+  "customPrompt": {
+    "title": "✨ Özel Prompt",
+    "placeholder": "Kendi stil tanımınızı yazın..."
+  },
+  "generate": {
+    "button": "Fotoğraf Oluştur",
+    "generating": "Oluşturuluyor...",
+    "selectPhotoFirst": "Lütfen önce bir fotoğraf seçin veya çekin.",
+    "selectStyleOrPrompt": "Lütfen bir stil seçin veya özel prompt girin."
+  },
+  "preview": {
+    "original": "📸 Orijinal Fotoğraf",
+    "result": "🎨 Sonuç",
+    "download": "İndir",
+    "resultWillAppearHere": "Sonuç burada görünecek"
+  },
+  "footer": {
+    "poweredBy": "✨ Gemini AI ile desteklenmektedir"
+  },
+  "errors": {
+    "cameraAccess": "Kameraya erişim sağlanamadı. Lütfen tarayıcı izinlerini kontrol edin.",
+    "imageGeneration": "Görüntü oluşturulurken bir hata oluştu. Lütfen tekrar deneyin."
+  }
+}
