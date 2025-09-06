@@ -356,7 +356,7 @@ function App() {
                         {getTemplateIcon(template.category)}
                       </div>
                       <div className="text-white text-sm font-semibold text-center">
-                        {template.name}
+                        {t(`styles.${template.id}`)}
                       </div>
                     </button>
                   );

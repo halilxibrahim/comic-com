@@ -15,7 +15,17 @@
     "medieval": "Ortaçağ Şövalyesi",
     "renaissance": "Rönesans Portresi",
     "superhero": "Süper Kahraman",
-    "comic": "Çizgi Roman"
+    "comic": "Çizgi Roman",
+    "cyberpunk": "Cyberpunk",
+    "steampunk": "Steampunk",
+    "anime": "Anime Karakteri",
+    "vintage": "Vintage Poster",
+    "watercolor": "Sulu Boya",
+    "noir": "Film Noir",
+    "space": "Uzay Kaşifi",
+    "pirate": "Korsan",
+    "lotr": "Yüzüklerin Efendisi",
+    "fantastic4": "Fantastik Dörtlü"
   },
   "customPrompt": {
     "title": "✨ Özel Prompt",

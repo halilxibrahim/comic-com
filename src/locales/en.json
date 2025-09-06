@@ -15,7 +15,17 @@
     "medieval": "Medieval Knight",
     "renaissance": "Renaissance Portrait",
     "superhero": "Superhero",
-    "comic": "Comic Book"
+    "comic": "Comic Book",
+    "cyberpunk": "Cyberpunk",
+    "steampunk": "Steampunk",
+    "anime": "Anime Character",
+    "vintage": "Vintage Poster",
+    "watercolor": "Watercolor",
+    "noir": "Film Noir",
+    "space": "Space Explorer",
+    "pirate": "Pirate",
+    "lotr": "Lord of the Rings",
+    "fantastic4": "Fantastic Four"
   },
   "customPrompt": {
     "title": "✨ Custom Prompt",
