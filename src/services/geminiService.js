@@ -193,9 +193,19 @@ export async function generateTextToImage(prompt, options = {}) {
 
 /**
  * Check if API key is configured
+ * In production: Always return true (backend proxy handles API key)
+ * In development: Check for VITE_GEMINI_API_KEY
  */
 export function isApiKeyConfigured() {
-  return !!import.meta.env.VITE_GEMINI_API_KEY;
+  const isProduction = import.meta.env.PROD || !import.meta.env.VITE_GEMINI_API_KEY;
+  
+  if (isProduction) {
+    // Production mode - backend proxy handles API key
+    return true;
+  } else {
+    // Development mode - check for VITE_GEMINI_API_KEY
+    return !!import.meta.env.VITE_GEMINI_API_KEY;
+  }
 }
 
 /**
