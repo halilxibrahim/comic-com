@@ -1,6 +1,6 @@
 # Comic-Com: AI-Powered Image Style Transformation
 
-A cutting-edge web application that transforms your photos into various artistic styles using Google's Gemini 2.5 Flash Image Preview API. Built for the Nano Banana Hackathon 2025.
+A cutting-edge web application that transforms your photos into various artistic styles using Google's **Nano Banana** (Gemini 2.5 Flash Image Preview) API. Built for the **Nano Banana Hackathon 2025**.
 
 ## 🚀 Features
 
@@ -22,7 +22,7 @@ A cutting-edge web application that transforms your photos into various artistic
 ## 🛠️ Technology Stack
 
 - **Frontend**: React 19, Vite, Tailwind CSS
-- **AI**: Google Gemini 2.5 Flash Image Preview API
+- **AI**: Google Nano Banana (Gemini 2.5 Flash Image Preview) API
 - **Deployment**: Vercel with serverless functions
 - **Internationalization**: i18next
 - **Icons**: Lucide React
@@ -74,10 +74,10 @@ A cutting-edge web application that transforms your photos into various artistic
 
 ### Getting Your API Key
 
-1. Visit [Google AI Studio](https://ai.studio/banana)
+1. Visit [Google AI Studio](https://ai.google.dev/)
 2. Sign in with your Google account
 3. Click "Get API key" in the left navigation
-4. Create a new API key
+4. Create a new API key for **Nano Banana Hackathon**
 5. Copy the key to your environment variables
 
 ### API Usage
@@ -97,7 +97,7 @@ A cutting-edge web application that transforms your photos into various artistic
 
 ## 🎯 Hackathon Features
 
-This project showcases the power of Gemini 2.5 Flash Image Preview through:
+This project showcases the power of **Nano Banana** (Gemini 2.5 Flash Image Preview) through:
 
 - **Dynamic Style Transfer**: Real-time image transformation
 - **Batch Processing**: Multiple style generation in one go

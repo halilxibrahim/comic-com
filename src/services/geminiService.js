@@ -63,14 +63,16 @@ export async function generateStyledImage(imageData, prompt, options = {}) {
         model: "gemini-2.5-flash-image-preview",
         contents: [
           { 
-            text: fullPrompt 
-          },
-          {
-            inlineData: {
-              mimeType: "image/jpeg",
-              data: base64Image,
-            },
-          },
+            parts: [
+              { text: fullPrompt },
+              {
+                inlineData: {
+                  mimeType: "image/jpeg",
+                  data: base64Image,
+                },
+              }
+            ]
+          }
         ],
       });
 
@@ -143,7 +145,13 @@ export async function generateTextToImage(prompt, options = {}) {
     
     const response = await aiInstance.models.generateContent({
       model: "gemini-2.5-flash-image-preview",
-      contents: prompt,
+      contents: [
+        {
+          parts: [
+            { text: prompt }
+          ]
+        }
+      ],
     });
 
     // Process the response to extract generated image
@@ -199,7 +207,13 @@ export async function getApiStatus() {
     
     const response = await aiInstance.models.generateContent({
       model: "gemini-2.5-flash-image-preview",
-      contents: "Hello, test message",
+      contents: [
+        {
+          parts: [
+            { text: "Hello, test message" }
+          ]
+        }
+      ],
     });
     
     return {
