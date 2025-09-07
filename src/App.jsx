@@ -620,6 +620,7 @@ function App() {
         {/* Footer */}
         <div className="text-center mt-12">
           <p className="text-white/60 text-lg">{t('footer.poweredBy')}</p>
+          <p className="text-white/60 text-lg">{t('footer.halil')}</p>
         </div>
         </div>
         

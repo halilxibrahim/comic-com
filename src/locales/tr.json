@@ -44,7 +44,8 @@
     "resultWillAppearHere": "Sonuç burada görünecek"
   },
   "footer": {
-    "poweredBy": "✨ Gemini AI ile desteklenmektedir"
+    "poweredBy": "✨ Google Nano Banana ile desteklenmektedir",
+    "halil": "✨ Halil ibrahim Kamacı tarafından geliştirildi"
   },
   "errors": {
     "cameraAccess": "Kameraya erişim sağlanamadı. Lütfen tarayıcı izinlerini kontrol edin.",
