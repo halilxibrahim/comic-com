@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "🎭 Story Photo Editor",
+    "title": "🎭 Comic-Com Story Photo Editor",
     "subtitle": "Transform your selfie into historical characters, superheroes, or comic book figures"
   },
   "upload": {
@@ -53,7 +53,7 @@
   },
   "onboarding": {
     "welcome": "Welcome!",
-    "title": "🎭 Story Photo Editor",
+    "title": "🎭 Comic-Com Story Photo Editor",
     "subtitle": "Transform your selfie into historical characters, superheroes, or comic book figures",
     "features": {
       "title": "What Can You Do?",
