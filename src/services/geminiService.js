@@ -1,10 +1,17 @@
 import { GoogleGenAI, Modality } from '@google/genai';
 import { dataURLtoBlob } from '../utils/imageUtils';
 
-// Initialize Gemini AI
-const ai = new GoogleGenAI({
-  apiKey: import.meta.env.VITE_GEMINI_API_KEY
-});
+// Lazy initialization of Gemini AI - only when needed and API key is available
+let ai = null;
+
+function getGeminiAI() {
+  if (!ai && import.meta.env.VITE_GEMINI_API_KEY) {
+    ai = new GoogleGenAI({
+      apiKey: import.meta.env.VITE_GEMINI_API_KEY
+    });
+  }
+  return ai;
+}
 
 /**
  * Generate styled image using Gemini API (Text-and-Image-to-Image)
@@ -47,7 +54,12 @@ export async function generateStyledImage(imageData, prompt, options = {}) {
       const fullPrompt = `Transform the provided image according to this description: ${prompt}. Make sure the transformation is clear, artistic, and maintains the original composition while applying the new style.`;
 
       // Use the correct API format for text-and-image-to-image
-      const response = await ai.models.generateContent({
+      const aiInstance = getGeminiAI();
+      if (!aiInstance) {
+        throw new Error('Gemini AI not properly initialized');
+      }
+      
+      const response = await aiInstance.models.generateContent({
         model: "gemini-2.5-flash-image-preview",
         contents: [
           { 
@@ -124,7 +136,12 @@ export async function generateTextToImage(prompt, options = {}) {
       throw new Error('Gemini API key is not configured. Please add VITE_GEMINI_API_KEY to your environment variables.');
     }
 
-    const response = await ai.models.generateContent({
+    const aiInstance = getGeminiAI();
+    if (!aiInstance) {
+      throw new Error('Gemini AI not properly initialized');
+    }
+    
+    const response = await aiInstance.models.generateContent({
       model: "gemini-2.5-flash-image-preview",
       contents: prompt,
     });
@@ -175,7 +192,12 @@ export async function getApiStatus() {
     }
 
     // Test API with a simple text generation request
-    const response = await ai.models.generateContent({
+    const aiInstance = getGeminiAI();
+    if (!aiInstance) {
+      throw new Error('Gemini AI not properly initialized');
+    }
+    
+    const response = await aiInstance.models.generateContent({
       model: "gemini-2.5-flash-image-preview",
       contents: "Hello, test message",
     });
