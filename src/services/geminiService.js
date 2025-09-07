@@ -21,8 +21,15 @@ export async function generateStyledImage(imageData, prompt, options = {}) {
   try {
     const isProduction = import.meta.env.PROD || !import.meta.env.VITE_GEMINI_API_KEY;
     
+    console.log('Generation mode:', { 
+      isProduction, 
+      PROD: import.meta.env.PROD, 
+      hasViteKey: !!import.meta.env.VITE_GEMINI_API_KEY 
+    });
+    
     if (isProduction) {
       // Production mode - use backend proxy
+      console.log('Using production backend proxy...');
       const response = await fetch('/api/generate-image', {
         method: 'POST',
         headers: {
@@ -35,9 +42,13 @@ export async function generateStyledImage(imageData, prompt, options = {}) {
       });
 
       const result = await response.json();
+      console.log('Backend response:', { status: response.status, result });
       
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to generate image');
+        // Better error handling for production
+        const errorMessage = result.error || 'Failed to generate image';
+        console.error('Backend error:', { status: response.status, error: errorMessage, details: result.details });
+        throw new Error(errorMessage);
       }
 
       return result;

@@ -32,8 +32,11 @@ export default async function handler(req, res) {
 
     // Check API key
     if (!process.env.GEMINI_API_KEY) {
-      console.error('GEMINI_API_KEY environment variable not set');
-      return res.status(500).json({ error: 'Server configuration error' });
+      console.error('GEMINI_API_KEY environment variable not set in Vercel');
+      return res.status(500).json({ 
+        error: 'API key not configured on server. Please add GEMINI_API_KEY environment variable in Vercel dashboard.',
+        details: 'Missing GEMINI_API_KEY in production environment'
+      });
     }
 
     // Rate limiting - simple implementation
