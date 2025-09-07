@@ -12,10 +12,29 @@ const ai = new GoogleGenAI({
  */
 export async function generateStyledImage(imageData, prompt, options = {}) {
   try {
-    // Check if we're in development mode (has API key) or production (uses proxy)
-    const isDevelopment = import.meta.env.VITE_GEMINI_API_KEY;
+    const isProduction = import.meta.env.PROD || !import.meta.env.VITE_GEMINI_API_KEY;
     
-    if (isDevelopment) {
+    if (isProduction) {
+      // Production mode - use backend proxy
+      const response = await fetch('/api/generate-image', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          imageData,
+          prompt
+        })
+      });
+
+      const result = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to generate image');
+      }
+
+      return result;
+    } else {
       // Development mode - direct API call
       if (!import.meta.env.VITE_GEMINI_API_KEY) {
         throw new Error('Gemini API key is not configured. Please add VITE_GEMINI_API_KEY to your environment variables.');
@@ -60,26 +79,6 @@ export async function generateStyledImage(imageData, prompt, options = {}) {
 
       // If no image found in response, return error
       throw new Error('No image was generated. Please try a different prompt or check your input image.');
-    } else {
-      // Production mode - use backend proxy
-      const response = await fetch('/api/generate-image', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          imageData,
-          prompt
-        })
-      });
-
-      const result = await response.json();
-      
-      if (!response.ok) {
-        throw new Error(result.error || 'Failed to generate image');
-      }
-
-      return result;
     }
 
   } catch (error) {
